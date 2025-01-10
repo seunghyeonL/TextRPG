@@ -9,6 +9,7 @@ string HealthPotion::GetName()
     return Name;
 }
 
-void HealthPotion::Use(Character*)
+void HealthPotion::Use(Character* character)
 {
+	cout << "체력을 " << HealthRestore << " 회복했습니다." << endl;
 }

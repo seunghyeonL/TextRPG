@@ -133,8 +133,8 @@
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="HealthPotion.cpp" />
+    <ClCompile Include="IItem.cpp" />
     <ClCompile Include="IMonster.cpp" />
-    <ClCompile Include="Item.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Orc.cpp" />
     <ClCompile Include="Slime.cpp" />
@@ -146,8 +146,8 @@
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Goblin.h" />
     <ClInclude Include="HealthPotion.h" />
+    <ClInclude Include="IItem.h" />
     <ClInclude Include="IMonster.h" />
-    <ClInclude Include="Item.h" />
     <ClInclude Include="Orc.h" />
     <ClInclude Include="Slime.h" />
     <ClInclude Include="Troll.h" />

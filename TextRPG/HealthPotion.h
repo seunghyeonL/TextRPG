@@ -1,4 +1,4 @@
-#include "Item.h"
+#include "IItem.h"
 #include "Character.h"
 #include <iostream>
 #include <string>
@@ -13,6 +13,6 @@ private:
 
 public:
 	HealthPotion();
-	string HetName() override;
-	void Use(Character*) override;
+	string GetName() override;
+	void Use(Character* character) override;
 };
