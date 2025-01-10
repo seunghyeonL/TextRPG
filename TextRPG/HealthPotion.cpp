@@ -11,5 +11,6 @@ string HealthPotion::GetName()
 
 void HealthPotion::Use(Character* character)
 {
+	character->SetHealth(character->GetHealth() + HealthRestore);
 	cout << "체력을 " << HealthRestore << " 회복했습니다." << endl;
 }
