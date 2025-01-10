@@ -8,6 +8,6 @@ class IItem
 {
 public:
 	~IItem() = default;
-	virtual string getName() = 0;
-	virtual void use(Character*) = 0;
+	virtual string GetName() = 0;
+	virtual void Use(Character *) = 0;
 };

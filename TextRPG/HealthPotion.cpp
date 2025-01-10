@@ -2,13 +2,13 @@
 #include "Character.h"
 #include <iostream>
 HealthPotion::HealthPotion()
-	: name("Red Potion"), healthRestore(50) {}
+	: Name("Red Potion"), HealthRestore(50) {}
 
-string HealthPotion::getName()
+string HealthPotion::GetName()
 {
-    return name;
+    return Name;
 }
 
-void HealthPotion::use(Character*)
+void HealthPotion::Use(Character*)
 {
 }

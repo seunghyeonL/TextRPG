@@ -5,13 +5,14 @@
 
 using namespace std;
 
-class HealthPotion : public IItem {
-private: 
-	const string name;
-	const int healthRestore;
+class HealthPotion : public IItem
+{
+private:
+	const string Name;
+	const int HealthRestore;
 
 public:
 	HealthPotion();
-	string getName() override;
-	void use(Character*) override;
+	string HetName() override;
+	void Use(Character*) override;
 };
