@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="AttackBoost.cpp" />
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Filter.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="HealthPotion.cpp" />
