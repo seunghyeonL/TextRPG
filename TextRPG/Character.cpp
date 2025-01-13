@@ -88,3 +88,11 @@ double Character::GetGold()
 {
     return Gold;
 }
+
+void Character::DisplayStatus()
+{
+    cout << "\n현재 레벨 : " << Level << "레벨 " << Experience / MaxExperience * 100 << "경험치\n";
+    cout << "현재 체력 : " << Health << " / " << MaxHealth << "(" << Health / MaxHealth << ")\n";
+    cout << "현재 공격력 : " << Attack << "\n";
+    cout << "현재 보유 골드 : " << Gold << "\n\n";
+}
