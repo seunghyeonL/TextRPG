@@ -1,9 +1,17 @@
 #include "GameManager.h"
+#include "Level_Manager.h"
 #include "IMonster.h"
 #include "Goblin.h"
 #include "Slime.h"
 #include "Troll.h"
+#include "Level.h"
 #include "Orc.h"
+
+void GameManager::Initialize()
+{
+	m_pLevel_Manager = Level_Manager::Create();
+
+}
 
 IMonster* GenerateMonster(int level)
 {
@@ -17,7 +25,7 @@ IMonster* GenerateMonster(int level)
 	}
 }
 
-bool battle(Character* player)
+bool GameManager::battle(Character* player)
 {
 	if(player->GetLevel() == 10)
 	{
@@ -28,14 +36,47 @@ bool battle(Character* player)
 		// 일반 몬스터 조우
 		// 전투 진행
 	}
+	return true;
 }
 
-void VisitShop(Character* player)
+void GameManager::VisitShop(Character* player)
 {
 
 }
 
-void Exit()
+void GameManager::Exit()
 {
+	
 
+}
+
+void GameManager::Update()
+{
+	m_pLevel_Manager->Update();
+}
+
+void GameManager::Render()
+{
+	m_pLevel_Manager->Render();
+}
+
+void GameManager::Change_Level(Level* pNewLevel)
+{
+	if (nullptr == m_pLevel_Manager)
+		return;
+
+	m_pLevel_Manager->Change_Level(pNewLevel);
+}
+
+GameManager* GameManager::Create()
+{
+	GameManager* pInstance = new GameManager();
+
+	pInstance->Initialize();
+
+	return pInstance;
+}
+
+void GameManager::Free()
+{
 }

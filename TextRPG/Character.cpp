@@ -30,6 +30,7 @@ int Character::GetLevel()
 int Character::SetLevel(int level)
 {
     Level = level;
+    return Level;
 }
 
 int Character::GetMaxLevel()

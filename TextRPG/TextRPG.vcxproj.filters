@@ -42,9 +42,23 @@
     <Filter Include="소스 파일\Default">
       <UniqueIdentifier>{a44bc811-c7ca-4192-85d0-a534687c6d3d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="소스 파일\00.MainApp">
+      <UniqueIdentifier>{5c3060fb-9401-41f3-ba9f-f354c1d5cd00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Level">
+      <UniqueIdentifier>{ccf973f0-26f2-41e5-a02b-0871f6b58ac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Level\Level_Logo">
+      <UniqueIdentifier>{39d36879-6999-40e2-a3f8-be77177320ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\99.Defines">
+      <UniqueIdentifier>{d35248d9-9812-4165-9e5f-d168001c0c66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Level\Manager">
+      <UniqueIdentifier>{c0307462-ec34-4abf-86e6-16df7c05c563}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\98.Input">
+      <UniqueIdentifier>{89d5f625-13d5-4366-a7dd-deeb2bdcf7b5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +95,24 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일\Default</Filter>
     </ClCompile>
+    <ClCompile Include="MainApp.cpp">
+      <Filter>소스 파일\00.MainApp</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>소스 파일\01.Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Level_Logo.cpp">
+      <Filter>소스 파일\01.Level\Level_Logo</Filter>
+    </ClCompile>
+    <ClCompile Include="Client_Defines.h">
+      <Filter>소스 파일\99.Defines</Filter>
+    </ClCompile>
+    <ClCompile Include="Level_Manager.cpp">
+      <Filter>소스 파일\01.Level\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Input_Manager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Orc.h">
@@ -112,6 +144,24 @@
     </ClInclude>
     <ClInclude Include="Slime.h">
       <Filter>소스 파일\Monster\Slime</Filter>
+    </ClInclude>
+    <ClInclude Include="MainApp.h">
+      <Filter>소스 파일\00.MainApp</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>소스 파일\01.Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Level_Logo.h">
+      <Filter>소스 파일\01.Level\Level_Logo</Filter>
+    </ClInclude>
+    <ClInclude Include="Level_Manager.h">
+      <Filter>소스 파일\01.Level\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Macro.h">
+      <Filter>소스 파일\99.Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="Input_Manager.h">
+      <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
