@@ -96,3 +96,8 @@ void Character::DisplayStatus()
     cout << "현재 공격력 : " << Attack << "\n";
     cout << "현재 보유 골드 : " << Gold << "\n\n";
 }
+
+void Character::LevelUp()
+{
+
+}

@@ -36,4 +36,5 @@ public:
     double GetMaxExperience();
     double GetGold();
     void DisplayStatus();
+    void LevelUp();
 };
