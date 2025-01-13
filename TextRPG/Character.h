@@ -25,9 +25,11 @@ public:
     static Character* GetInstance(string name = "");
     string GetName();
     int GetLevel();
+    int SetLevel(int level);
+    int GetMaxLevel();
     double GetHealth();
-    double GetAttack();
     void SetHealth(double health);
+    double GetAttack();
     void SetAttack(double attack);
     void TakeDamage(double damage);
     double GetExperience();
