@@ -1,7 +1,7 @@
 #include "GameManager.h"
 #include "IMonster.h"
 
-IMonster* GenerateMonster(int level)
+IMonster* GameManager::GenerateMonster(int level)
 {
 	switch (level % 4)
 	{
@@ -9,29 +9,31 @@ IMonster* GenerateMonster(int level)
 	case 1: return new Slime(level); break;
 	case 2: return new Goblin(level); break;
 	case 3: return new Orc(level); break;
-	// case : return new BossMonster(level); break;
+		// case : return new BossMonster(level); break;
 	}
+	return nullptr;
 }
 
-bool battle(Character* player)
+bool GameManager::battle(Character* player)
 {
-	if(player->GetLevel() == 10)
+	if (player->GetLevel() == 10)
 	{
 		// 보스 몬스터 조우
+
 	}
 	else
 	{
+		GenerateMonster(player->GetLevel());
 		// 일반 몬스터 조우
 		// 전투 진행
 	}
+	return false;
 }
 
-void VisitShop(Character* player)
+void GameManager::VisitShop(Character* player)
 {
-
 }
 
-void Exit()
+void GameManager::Exit()
 {
-
 }

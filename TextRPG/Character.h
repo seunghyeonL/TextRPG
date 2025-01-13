@@ -26,4 +26,8 @@ public:
     void TakeDamage(double damage);
     double GetExperience();
     double GetGold();
+    int SetLevel();
+    double SetHealth();
+    double SetExperience();
+    double SetGold();
 };
