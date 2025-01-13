@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Character.h"
 
 Character* Character::Instance = nullptr;
@@ -32,6 +33,33 @@ double Character::GetHealth()
     return Health;
 }
 
+double Character::GetAttack()
+{
+    return Attack;
+}
+
+void Character::SetHealth(double health)
+{
+    if (health >= MaxHealth)
+    {
+        Health = MaxHealth;
+    }
+    else if (health > 0 && health < MaxHealth)
+    {
+        Health = health;
+    }
+    else
+    {
+        cout << "불가능합니다.\n";
+        return;
+    }
+}
+
+void Character::SetAttack(double attack)
+{
+    Attack = attack;
+}
+
 void Character::TakeDamage(double damage)
 {
     Health -= damage;
@@ -43,7 +71,23 @@ double Character::GetExperience()
     return Experience;
 }
 
+double Character::GetMaxExperience()
+{
+    return MaxExperience;
+}
+
 double Character::GetGold()
 {
     return Gold;
 }
+
+void Character::LevelUp()
+{
+    if (Experience >= MaxExperience)
+    {
+        Level++;
+        Experience = 0;
+        MaxExperience *= 1.5f;
+    }
+}
+

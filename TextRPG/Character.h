@@ -33,8 +33,5 @@ public:
     double GetExperience();
     double GetMaxExperience();
     double GetGold();
-    int SetLevel();
-    double SetHealth();
-    double SetExperience();
-    double SetGold();
+    void LevelUp();
 };
