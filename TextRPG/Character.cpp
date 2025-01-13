@@ -4,7 +4,7 @@
 Character* Character::Instance = nullptr;
 
 Character::Character(string name)
-    : Name(name), Level(1), MaxLevel(10), Health(200),
+    : Name(name), Level(1), Health(200),
     MaxHealth(200), Attack(30), Experience(0), Gold(0)
 {
 }
@@ -30,11 +30,6 @@ int Character::GetLevel()
 int Character::SetLevel(int level)
 {
     Level = level;
-}
-
-int Character::GetMaxLevel()
-{
-    return MaxLevel;
 }
 
 double Character::GetHealth()
@@ -97,6 +92,14 @@ void Character::DisplayStatus()
     cout << "현재 보유 골드 : " << Gold << "\n\n";
 }
 
+void Character::DisplayInventory()
+{
+    for (int i = 0; i < Inventory.size(); i++)
+    {
+        cout << i << ". " << Inventory[i].first->GetName() << ": " << Inventory[i].second << "개\n";
+    }
+}
+
 void Character::LevelUp()
 {
     if (Experience >= MaxExperience && Level != MaxLevel)
@@ -110,4 +113,13 @@ void Character::LevelUp()
         cout << "\nLevel up! 현재 레벨은 " << Level << "입니다.\n";
     }
     if (Level == MaxLevel) { cout << "\n현재 최대 레벨입니다.\n"; }
+}
+
+void Character::UseItem(int index)
+{
+    if (index >= 0 && index < Inventory.size())
+    {
+        cout << Inventory[index].first->GetName() << "을(를) 사용합니다.\n";
+        Inventory[index].first->Use();
+    }
 }
