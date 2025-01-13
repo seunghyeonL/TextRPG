@@ -1,7 +1,8 @@
 #pragma once
-
+#include "item.h"
 #include <string>
 #include <vector>
+#include <map>
 
 using namespace std;
 
@@ -18,6 +19,7 @@ private:
     double Experience; // 경험치
     double MaxExperience; // 최대 경험치
     double Gold; // 돈
+    vector<pair<item*, int>> Inventory;
 
     Character(string name);
 
@@ -26,7 +28,6 @@ public:
     string GetName();
     int GetLevel();
     int SetLevel(int level);
-    int GetMaxLevel();
     double GetHealth();
     void SetHealth(double health);
     double GetAttack();
@@ -35,4 +36,8 @@ public:
     double GetExperience();
     double GetMaxExperience();
     double GetGold();
+    void DisplayStatus();
+    void DisplayInventory();
+    void LevelUp();
+    void UseItem(int index);
 };

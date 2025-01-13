@@ -11,7 +11,7 @@ class GameManager
 public:
 	IMonster* GenerateMonster(int level);
 
-	bool battle(Character* player);
+	void battle(Character* player);
 
 	void VisitShop(Character* player);
 
