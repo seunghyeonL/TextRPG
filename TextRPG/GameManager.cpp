@@ -1,14 +1,18 @@
 #include "GameManager.h"
 #include "IMonster.h"
+#include "Goblin.h"
+#include "Slime.h"
+#include "Troll.h"
+#include "Orc.h"
 
 IMonster* GenerateMonster(int level)
 {
 	switch (level % 4)
 	{
-	case 0: return new Troll(level); break;
-	case 1: return new Slime(level); break;
-	case 2: return new Goblin(level); break;
-	case 3: return new Orc(level); break;
+	case 0: return Slime::Create(); break;
+	case 1: return Goblin::Create(); break;
+	case 2: return Orc::Create(); break;
+	case 3: return Troll::Create(); break;
 	// case : return new BossMonster(level); break;
 	}
 }

@@ -16,7 +16,7 @@ public: /* IMonster 부모 클래스에서 받아온 함수들 */
 	virtual void Update() override;
 
 public: /* 실제 동적할당을 대신해주는 함수 */
-	static Orc* Create(string name, int health, int attack);
+	static Orc* Create(string name = "", int health = 10, int attack = 5);
 	virtual void Free() override;
 };
 
