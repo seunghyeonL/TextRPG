@@ -99,5 +99,15 @@ void Character::DisplayStatus()
 
 void Character::LevelUp()
 {
-
+    if (Experience >= MaxExperience && Level != MaxLevel)
+    {
+        Experience = 0;
+        Level++;
+        MaxHealth += Level * 20;
+        Health = MaxHealth;
+        Attack += Level * 5;
+        MaxExperience += 10;
+        cout << "\nLevel up! 현재 레벨은 " << Level << "입니다.\n";
+    }
+    if (Level == MaxLevel) { cout << "\n현재 최대 레벨입니다.\n"; }
 }
